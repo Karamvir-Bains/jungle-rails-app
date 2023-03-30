@@ -4,6 +4,12 @@
     <h1>User &raquo; Signup</h1>
   </header>
 
+    <% if flash[:error] %>
+      <div class="alert alert-danger">
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+
   <%= form_for :user, url: '/users' do |f| %>
 
     <div class="form-group">
